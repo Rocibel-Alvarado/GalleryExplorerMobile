@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GalleryExplorerMobile</string>
+    <string name="text_title">Explore Stunning Images</string>
+    <string name="text_explorer_gallery">Explorer Gallery</string>
+    <string name="nav_bar_title_home">Home</string>
+    <string name="nav_bar_title_gallery">Gallery</string>
+    <string name="nav_bar_title_favorite">Favorite</string>
+    <string name="error_load_plans">Your favorites list is empty for now.</string>
+    <string name="empty_text">""</string>
+
+</resources>

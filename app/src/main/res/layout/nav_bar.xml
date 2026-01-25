@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_12"
+            android:layout_marginEnd="@dimen/standard_12"
+            android:layout_marginBottom="@dimen/standard_16"
+            android:background="@drawable/bottom_nav_bar_background"
+            android:elevation="@dimen/standard_6"
+            android:paddingBottom="@dimen/standard_8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout"
+                android:layout_width="@dimen/standard_0"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/standard_16"
+                android:paddingEnd="@dimen/standard_16"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_8"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint_layout">
+
+                    <ImageView
+                        android:id="@+id/image_view_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gallery"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_view_gallery"
+                        style="@style/BodyM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_bar_title_gallery"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/standard_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/linear_layout_gallery"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/standard_16"
+                app:layout_constraintTop_toTopOf="@id/linear_layout_gallery">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_home"
+                    android:layout_width="@dimen/standard_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/linear_layout_gallery"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/image_view_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color"
+                        android:src="@drawable/ic_home"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_view_home"
+                        style="@style/BodyM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_bar_title_home"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="@dimen/standard_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_gallery"
+                app:layout_constraintTop_toTopOf="@id/linear_layout_home">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="@dimen/standard_0"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standard_16"
+                app:layout_constraintBottom_toBottomOf="@id/linear_layout_gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/linear_layout_gallery"
+                app:layout_constraintTop_toTopOf="@id/linear_layout_gallery">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_favorite"
+                    android:layout_width="@dimen/standard_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/image_view_favorite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_not_favorite"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_view_favorite"
+                        style="@style/BodyM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nav_bar_title_favorite"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/navbar_item_color"
+                        android:tint="@drawable/navbar_item_color" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

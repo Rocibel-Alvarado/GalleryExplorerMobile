@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BodyXs" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/standard_text_size_16</item>
+        <item name="android:lineHeight">@dimen/size_font_line_height_xs</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyM" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/standard_text_size_20</item>
+        <item name="android:lineHeight">@dimen/size_font_line_height_m</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyXL" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/standard_text_size_28</item>
+        <item name="android:lineHeight">@dimen/size_font_line_height_xl</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <style name="Theme.GalleryExplorerMobile" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/color_black</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="android:navigationBarColor">@color/color_black</item>
+    </style>
+</resources>

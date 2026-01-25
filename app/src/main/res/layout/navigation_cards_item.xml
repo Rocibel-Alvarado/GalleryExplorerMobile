@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/standard_6"
+    android:layout_marginVertical="@dimen/standard_8"
+    app:cardCornerRadius="@dimen/standard_20"
+    app:cardElevation="@dimen/standard_4"
+    app:strokeColor="@color/color_red_wine"
+    app:strokeWidth="@dimen/standard_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="@dimen/standard_0"
+            android:layout_height="@dimen/standard_0"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/standard_0"
+            android:layout_height="@dimen/standard_60"
+            android:background="@drawable/gradient_bottom_dark"
+            app:layout_constraintBottom_toBottomOf="@id/card_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/card_not_favorite"
+            android:layout_width="@dimen/standard_36"
+            android:layout_height="@dimen/standard_36"
+            android:layout_margin="@dimen/standard_12"
+            android:background="@drawable/bg_circle_translucent"
+            android:padding="@dimen/standard_6"
+            android:src="@drawable/ic_not_favorite"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_white"
+            tools:visibility="visible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieFavorite"
+            android:layout_width="@dimen/standard_300"
+            android:layout_height="@dimen/standard_200"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/card_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/favorite_white" />
+
+        <ImageView
+            android:id="@+id/card_favorite"
+            android:layout_width="@dimen/standard_36"
+            android:layout_height="@dimen/standard_36"
+            android:layout_margin="@dimen/standard_12"
+            android:background="@drawable/bg_circle_translucent"
+            android:padding="@dimen/standard_6"
+            android:src="@drawable/ic_favorite"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_white" />
+
+        <TextView
+            android:id="@+id/card_title"
+            style="@style/BodyXs"
+            android:layout_width="@dimen/standard_0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_12"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="@id/card_image"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/text_explorer_gallery" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
