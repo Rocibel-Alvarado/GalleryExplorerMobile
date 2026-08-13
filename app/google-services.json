@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "58673416156",
+    "project_id": "galleryexplorermobile",
+    "storage_bucket": "galleryexplorermobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58673416156:android:7be64c8299f4bd2e327119",
+        "android_client_info": {
+          "package_name": "com.galleryExplorerMobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuubrPdXXHk8tLWL3svzOIFdLwbrVir90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

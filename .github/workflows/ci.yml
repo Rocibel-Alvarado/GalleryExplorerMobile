@@ -24,7 +24,7 @@ jobs: #jobs o tareas que va a realizar
       - name: Give execute permission to gradlew
         run: chmod +x ./gradlew
 
-      - name: Generate version
+      - name: Generate version #versiones
         run: |
           VERSION_CODE=${{ github.run_number }}
           VERSION_NAME=auto_dev-${{ github.run_number }}-$(date +%Y%m%d)
@@ -37,3 +37,24 @@ jobs: #jobs o tareas que va a realizar
 
       - name: Build app
         run: ./gradlew assemble -PVERSION_CODE=$VERSION_CODE -PVERSION_NAME=$VERSION_NAME
+
+      - name: Build Debug APK #genera la apk
+        run: ./gradlew assembleDebug -PVERSION_CODE=$VERSION_CODE -PVERSION_NAME=$VERSION_NAME
+
+      - name: Install Firebase CLI #instala firebase
+        run: npm install -g firebase-tools
+
+      - name: Configure Firebase credentials #configura las credenciales
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-service-account.json
+        run: |
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$GOOGLE_APPLICATION_CREDENTIALS"
+
+      - name: Distribute to Firebase # distribucion de app
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-service-account.json
+        run: |
+          firebase appdistribution:distribute app/build/outputs/apk/debug/app-debug.apk \
+            --app "${{ secrets.FIREBASE_APP_ID }}" \
+            --release-notes "Build $VERSION_NAME"
