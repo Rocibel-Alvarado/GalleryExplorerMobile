@@ -18,9 +18,22 @@ jobs: #jobs o tareas que va a realizar
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
       - name: Give execute permission to gradlew
         run: chmod +x ./gradlew
+
+      - name: Generate version
+        run: |
+          VERSION_CODE=${{ github.run_number }}
+          VERSION_NAME=auto_dev-${{ github.run_number }}-$(date +%Y%m%d)
+
+          echo "VERSION_CODE=$VERSION_CODE"
+          echo "VERSION_NAME=$VERSION_NAME"
+
+          echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_ENV
+          echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_ENV
+
       - name: Build app
-        run: ./gradlew assemble
+        run: ./gradlew assemble -PVERSION_CODE=$VERSION_CODE -PVERSION_NAME=$VERSION_NAME
