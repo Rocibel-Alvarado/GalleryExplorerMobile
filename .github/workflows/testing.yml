@@ -1,0 +1,25 @@
+name: Android Testing CI
+
+#cada vez q se produzca esta accion
+on: [push]
+
+jobs: #jobs o tareas que va a realizar
+  test: #Indica en qué máquina virtual se ejecutará
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: set up JDK 11
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+
+      - name: Unit Test
+        run: chmod +x ./gradlew testDebugUnitTest
+
+      - name: Android Test Report
+        uses: asadmansr/android-test-report-action@v1.2.0
+        if: ${{ always() }}

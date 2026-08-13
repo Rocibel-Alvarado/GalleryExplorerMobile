@@ -19,6 +19,9 @@ glide = "4.16.0"
 room = "2.6.1"
 lottie = "6.1.0"
 shimmer = "0.5.0"
+mockito = "5.23.0"
+mockitoKotlin = "5.4.0"
+junitJupiter = "5.8.1"
 
 
 [libraries]
@@ -48,6 +51,9 @@ room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
