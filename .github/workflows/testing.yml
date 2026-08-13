@@ -18,7 +18,7 @@ jobs: #jobs o tareas que va a realizar
 
 
       - name: Unit Test
-        run: chmod +x ./gradlew testDebugUnitTest
+        run:  ./gradlew testDebugUnitTest
 
       - name: Android Test Report
         uses: asadmansr/android-test-report-action@v1.2.0
