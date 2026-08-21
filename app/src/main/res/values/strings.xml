@@ -7,5 +7,7 @@
     <string name="nav_bar_title_favorite">Favorite</string>
     <string name="error_load_plans">Your favorites list is empty for now.</string>
     <string name="empty_text">""</string>
+    <string name="text_onback">"Atrás"</string>
+    <string name="text_title_navegation">"Nueva notificación"</string>
 
 </resources>

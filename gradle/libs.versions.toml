@@ -22,6 +22,7 @@ shimmer = "0.5.0"
 mockito = "5.23.0"
 mockitoKotlin = "5.4.0"
 junitJupiter = "5.8.1"
+firebaseMessaging = "24.1.2"
 
 
 [libraries]
@@ -54,11 +55,13 @@ shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.4" }
 
 

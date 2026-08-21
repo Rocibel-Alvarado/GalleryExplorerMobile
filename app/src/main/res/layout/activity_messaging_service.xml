@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screen.notification.screen.MessagingServiceActivity">
+
+    <!-- Toolbar -->
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Contenido central -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/standard_24"
+        android:paddingEnd="@dimen/standard_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintVertical_bias="0.35">
+
+        <!-- Icono circular -->
+        <FrameLayout
+            android:layout_width="@dimen/standard_76"
+            android:layout_height="@dimen/standard_76"
+            android:layout_marginBottom="@dimen/standard_22"
+            android:background="@drawable/cicle_bell">
+
+            <ImageView
+                android:layout_width="@dimen/standard_34"
+                android:layout_height="@dimen/standard_34"
+                android:layout_gravity="center"
+                android:contentDescription="Icono de notificación"
+                android:src="@drawable/ic_bell_ringing" />
+
+        </FrameLayout>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/BodyM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_12"
+            android:gravity="center"
+            tools:text="Título de la notificación"
+            android:textColor="@color/color_black" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/DescriptionXs"
+            android:layout_marginBottom="@dimen/standard_28"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            tools:text="Descripción breve del contenido de la notificación."
+            android:textColor="@color/color_gray_light" />
+
+        <!-- Botón de acción -->
+        <Button
+            android:id="@+id/btnAction"
+            style="@style/BodyM"
+            android:layout_width="280dp"
+            android:layout_height="@dimen/standard_48"
+            android:layout_marginBottom="@dimen/standard_28"
+            android:background="@drawable/shape_button_primary"
+            android:drawablePadding="@dimen/standard_8"
+            android:gravity="center"
+            android:paddingStart="@dimen/standard_16"
+            android:paddingEnd="@dimen/standard_16"
+            android:text="Ir a la acción"
+            android:textColor="@color/color_black"
+            app:backgroundTint="@null" />
+
+        <!-- Pregunta de valoración -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_12"
+            android:text="¿Esta notificación te fue útil?"
+            android:textColor="#9A9A9A"
+            android:textSize="13sp" />
+
+        <!-- Botones de valoración -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnThumbUp"
+                android:layout_width="@dimen/standard_56"
+                android:layout_height="@dimen/standard_56"
+                android:layout_marginEnd="@dimen/standard_20"
+                android:background="@drawable/thumb_success"
+                android:contentDescription="Me gusta"
+                android:padding="@dimen/standard_16"
+                android:src="@drawable/ic_thumb_success" />
+
+            <ImageButton
+                android:id="@+id/btnThumbDown"
+                android:layout_width="@dimen/standard_56"
+                android:layout_height="@dimen/standard_56"
+                android:background="@drawable/thumb_danger"
+                android:contentDescription="No me gusta"
+                android:padding="@dimen/standard_16"
+                android:src="@drawable/ic_thumb_down" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

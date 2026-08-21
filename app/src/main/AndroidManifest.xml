@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".GalleryExplorerMobile"
@@ -11,6 +12,9 @@
         android:roundIcon="@mipmap/app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GalleryExplorerMobile">
+        <activity
+            android:name=".presentation.screen.notification.screen.MessagingServiceActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.screen.home.MainActivity"
             android:exported="true"
@@ -23,6 +27,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".data.notification.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

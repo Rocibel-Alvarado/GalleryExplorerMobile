@@ -12,11 +12,14 @@
     <color name="color_red_light">#FBDCDF</color>
     <color name="color_dark_gray">#2C2C2C</color>
     <color name="color_gray">#E0E0E0</color>
+    <color name="color_gray_light">#6B6B6B</color>
     <color name="color_silver">#CBD5E1</color>
     <color name="color_red_wine">#1F0000</color>
     <color name="color_light_blue">#F8FAFC</color>
     <color name="color_blue_cyan">#E2E8F0</color>
     <color name="color_rose">#E35454</color>
+    <color name="color_rose_background">#FBE9E9</color>
+    <color name="color_green_success_background">#E1F5EE</color>
 
     <color name="navbar_background">#1F2937</color>
     <color name="navbar_inactive">#CBD5E1</color>
